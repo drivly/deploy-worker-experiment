@@ -3,7 +3,6 @@ const github = require('@actions/github')
 const fetch = require('node-fetch')
 
 try {
-  // `who-to-greet` input defined in action metadata file
   const accountId = core.getInput('accountId')
   const name = core.getInput('name')
   const environment = core.getInput('environment')
