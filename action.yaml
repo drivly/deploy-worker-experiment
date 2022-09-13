@@ -1,0 +1,26 @@
+name: 'Deploy Worker'
+description:
+  'GitHub Action for Rapid Cloudflare Worker Deployment'
+branding:
+  icon: 'zap'
+  color: 'yellow'
+# inputs:
+#   url:
+#     description: 'The webhook URL to send the request to.'
+#     required: true
+#     default: ''
+#   json:
+#     description: 'The stringified JSON body to be sent, if any.'
+#     required: false
+#     default: '{}'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

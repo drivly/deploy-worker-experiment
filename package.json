@@ -1,0 +1,25 @@
+{
+  "name": "deploy-worker",
+  "version": "0.1.0",
+  "description": "GitHub Action for Rapid Cloudflare Worker Deployment",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drivly/deploy-worker.git"
+  },
+  "author": "Drivly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drivly/deploy-worker/issues"
+  },
+  "homepage": "https://github.com/drivly/deploy-worker#readme",
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/github": "^5.0.3",
+    "@vercel/ncc": "^0.34.0",
+    "node-fetch": "^3.2.10"
+  }
+}
