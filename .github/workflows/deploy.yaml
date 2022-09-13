@@ -1,0 +1,27 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./dist/
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          main: worker.js
+          route: 
+           - pattern: '*/*'
+           - zoneId: ea8a47831d0640825d0597af006a3cad
+          usageModel: unbound
+          compatibilityDate: 2021-09-13
+          services:
+            binding: CTX
+            service: ctx-do
+            environment: production

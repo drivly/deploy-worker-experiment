@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/drivly/deploy-worker.git"
   },
-  "author": "Drivly",
+  "author": "Driv.ly",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/drivly/deploy-worker/issues"
