@@ -11,7 +11,7 @@ jobs:
     name: Deploy
     steps:
       - uses: actions/checkout@v3
-      - uses: ./dist/
+      - uses: ./
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
@@ -19,7 +19,7 @@ jobs:
           main: worker.js
           route: 
            - pattern: '*/*'
-           - zoneId: ea8a47831d0640825d0597af006a3cad
+           - zoneName: workers.do
           usageModel: unbound
           compatibilityDate: 2021-09-13
           services:
