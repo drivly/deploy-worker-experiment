@@ -25,5 +25,5 @@ jobs:
             pattern: '*/*'
             zoneName: workers.do
           usageModel: unbound
-          compatibilityDate: 2021-09-13
+          compatibilityDate: '2021-09-13'
 ```
