@@ -22,8 +22,8 @@ jobs:
           name: workers-do
           main: worker.js
           route: 
-           - pattern: '*/*'
-           - zoneName: workers.do
+            pattern: '*/*'
+            zoneName: workers.do
           usageModel: unbound
           compatibilityDate: 2021-09-13
 ```
