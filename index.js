@@ -7,8 +7,10 @@ try {
   const accountId = core.getInput('accountId')
   
   const wrangler = toml.parse(fs.readFileSync('wrangler.toml'))
+  const worker = fs.readFileSync(wrangler.main)
   
   console.log(wrangler)
+  console.log(worker)
 
 //   fetch(`https://dash.cloudflare.com/api/v4/accounts/${accountId}/workers/services/${name}/environments/${environment}?include_subdomain_availability=true`, {
 //     "headers": {
