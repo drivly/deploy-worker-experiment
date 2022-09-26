@@ -5,6 +5,10 @@ import toml from 'toml'
 
 try {
   const accountId = core.getInput('accountId')
+  
+  const wrangler = toml.parse(fs.readFileSync('wrangler.toml'))
+  
+  console.log(wrangler)
 
 //   fetch(`https://dash.cloudflare.com/api/v4/accounts/${accountId}/workers/services/${name}/environments/${environment}?include_subdomain_availability=true`, {
 //     "headers": {
