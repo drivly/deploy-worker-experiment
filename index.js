@@ -2,12 +2,18 @@ import fs from 'fs'
 import core from '@actions/core'
 import github from '@actions/github'
 import toml from 'toml'
+import esbuild from 'esbuild'
 
 try {
   const accountId = core.getInput('accountId')
   
   const wrangler = toml.parse(fs.readFileSync('wrangler.toml'))
   const worker = fs.readFileSync(wrangler.main)
+  
+  const bundle = esbuild.transform(code, options)
+  console.log(bundle)
+//   esbuild.transform(code, options).then(result => { ... })
+//   esbuild.build(options).then(result => { ... })
   
   console.log(wrangler)
   console.log(worker)
