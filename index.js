@@ -16,7 +16,7 @@ try {
   const worker = fs.readFileSync(wrangler.main).toString()
   
 //   const bundle = esbuild.transform(worker, { bundle: true })
-  console.log(bundle)
+//   console.log(bundle)
 //   esbuild.transform(code, options).then(result => { ... })
 //   esbuild.build(options).then(result => { ... })
   
