@@ -1,13 +1,13 @@
-// import fs from 'fs'
-// import core from '@actions/core'
-// import github from '@actions/github'
-// import toml from 'toml'
-// import esbuild from 'esbuild'
-const fs = require('fs')
-const core = require('@actions/core')
-const github = require('@actions/github')
-const toml = require('toml')
-const esbuild = require('esbuild')
+import fs from 'fs'
+import core from '@actions/core'
+import github from '@actions/github'
+import toml from 'toml'
+import esbuild from 'esbuild-wasm'
+// const fs = require('fs')
+// const core = require('@actions/core')
+// const github = require('@actions/github')
+// const toml = require('toml')
+// const esbuild = require('esbuild')
 
 try {
   const accountId = core.getInput('accountId')
