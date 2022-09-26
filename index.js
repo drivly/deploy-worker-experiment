@@ -15,7 +15,7 @@ try {
   const wrangler = toml.parse(fs.readFileSync('wrangler.toml'))
   const worker = fs.readFileSync(wrangler.main)
   
-  const bundle = esbuild.transform(wrangler.main)
+  const bundle = esbuild.transform(wrangler.main, { bundle: true })
   console.log(bundle)
 //   esbuild.transform(code, options).then(result => { ... })
 //   esbuild.build(options).then(result => { ... })
