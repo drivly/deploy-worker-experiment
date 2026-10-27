@@ -23,6 +23,6 @@
     "@vercel/ncc": "^0.34.0",
     "esbuild-wasm": "^0.15.9",
     "node-fetch": "^3.2.10",
-    "toml": "^3.0.0"
+    "toml": "^5.0.1"
   }
 }
